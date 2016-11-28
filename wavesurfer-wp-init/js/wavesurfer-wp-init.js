@@ -5,18 +5,18 @@
 var $j = jQuery.noConflict();
 
 
-// Initialize WaveSurfer Player at page ready
+// Page ready
 $j(document).on('ready', function() {
     $j(document).trigger('wavesurfer-wp-init')
 });
 
 
-// Initialize WaveSurfer Player after a button click
+// After a button click
 $j('.wavesurfer-button').click(function() {
     $j(document).trigger('wavesurfer-wp-init')
 });
 
-// All clink on links
+// Click on any link
 $(function(){
   $('body').on('click', 'a', function() { 
     $j(document).trigger('wavesurfer-wp-init')
