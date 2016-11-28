@@ -15,3 +15,10 @@ $j(document).on('ready', function() {
 $j('.wavesurfer-button').click(function() {
     $j(document).trigger('wavesurfer-wp-init')
 });
+
+// All clink on links
+$(function(){
+  $('body').on('click', 'a', function() { 
+    $j(document).trigger('wavesurfer-wp-init')
+  });
+});
