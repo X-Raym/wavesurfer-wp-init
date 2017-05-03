@@ -1,7 +1,10 @@
 /**
  * WaveSurfer-WP Init
+ * Choose or Define your own rules
  */
  
+
+// No conflict mod for WordPress
 var $j = jQuery.noConflict();
 
 
@@ -22,3 +25,11 @@ $(function(){
     $j(document).trigger('wavesurfer-wp-init')
   });
 });
+
+
+// AJAX Load More Plugin
+$(function() {
+  $.fn.almComplete = function(alm){
+    $j(document).trigger('wavesurfer-wp-init');
+  };
+})(jQuery);
