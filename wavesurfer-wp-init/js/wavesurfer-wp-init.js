@@ -22,9 +22,9 @@ $j('.wavesurfer-button').click(function() {
     $j(document).trigger('wavesurfer-wp-init')
 });
 
-// Click on any link
+// Click on wavesurfer-button link
 $(function(){
-  $('body').on('click', 'a', function() { 
+  $('body').on('click', 'a.wavesurfer-button', function() { 
     $j(document).trigger('wavesurfer-wp-init')
   });
 });
