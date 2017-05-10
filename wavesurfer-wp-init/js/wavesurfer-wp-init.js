@@ -11,27 +11,23 @@ var $j = jQuery.noConflict();
 // ====== User-Defined Events ====== //
 // Delete unnecessary ones.
 
-// Page ready
-$j(document).on('ready', function() {
-    $j(document).trigger('wavesurfer-wp-init')
-});
-
-
 // After a button click
 $j('.wavesurfer-button').click(function() {
-    $j(document).trigger('wavesurfer-wp-init')
+    $j(document).trigger('wavesurfer')
 });
 
 // Click on wavesurfer-button link
 $(function(){
   $('body').on('click', 'a.wavesurfer-button', function() { 
-    $j(document).trigger('wavesurfer-wp-init')
+    $j(document).trigger('wavesurfer')
   });
 });
 
 // AJAX Load More Plugin: https://connekthq.com/plugins/ajax-load-more/docs/callback-functions/
-$(function() {
-  $.fn.almComplete = function(alm){
-    $j(document).trigger('wavesurfer-wp-init');
-  };
-})(jQuery);
+// No conflict mod for WordPress
+$j( document ).ready(function() {
+  $j.fn.almComplete = function(alm){
+  	//alert('alm is complete');
+    $j(document).trigger('wavesurfer');
+  }
+});
